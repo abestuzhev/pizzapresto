@@ -1,0 +1,9 @@
+.layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+body, html {
+    font-family: 'Roboto', sans-serif;
+}
