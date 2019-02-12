@@ -1,32 +1,102 @@
-.menu {
+/*icon*/
+.c-icon {
+    display: inline-block;
+
+}
+.icon-pizza {
+    font-size: 45px;
+    width: 1em;
+    height: .9em;
+
+}
+.icon-roll {
+    font-size: 35px;
+    width: 1em;
+    height: 1.1em;
+
+}
+.icon-salad {
+    font-size: 46px;
+    width: 1em;
+    height: .8em;
+
+}
+.icon-pot {
+    font-size: 45px;
+    width: 1em;
+    height: .56em;
+
+}
+.icon-pasta {
+    font-size: 46px;
+    width: 1em;
+    height: .95em;
+
+}
+
+.icon-risotto {
+    font-size: 49px;
+    width: 1em;
+    height: .5em;
+
+}
+
+.icon-garnish {
+    font-size: 30px;
+    width: 1em;
+    height: 1.1em;
+
+}
+.icon-frappe {
+    font-size: 31px;
+    width: 1em;
+    height: 1.2em;
+
+}
+.icon-mustard {
+    font-size: 31px;
+    width: 1em;
+    height: 1.2em;
+
+}
+
+.home-section {
     margin: 0 36px;
+}
+
+.menu {
+    background-color: #fff;
+    margin-bottom: 40px;
     padding: 15px 37px 20px;
     box-shadow: 0px 17px 54px 0px rgba(193, 23, 23, 0.05);
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-end;
-
 }
 
 .menu-item {
-    padding-top: 40px;
+    //padding-top: 40px;
 }
 
 
 .menu-item__link {
+    padding-top: 41px;
     text-decoration: none;
     color: #383838;
     font-weight: 700;
     transition: all .1s ease-in-out;
     position: relative;
+    display: block;
+    text-align: center;
 }
 
 
 
 .menu-item:hover .menu-item__icon{
-    transform: translateY(-4px);
+    transform: translateY(-4px) translateX(-50%);
     transition: all .1s ease-in-out;
+
 }
 
 
@@ -38,21 +108,68 @@
 .menu-item__text {
     text-transform: uppercase;
     font-size: 16px;
+    text-align: center;
+    display: block;
 }
 
 .menu-item__icon {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
     display: block;
     text-align: center;
     transition: all .1s ease-in-out;
 }
-/*icon*/
-.c-icon {
-    display: inline-block;
+
+
+.app {
+    display: block;
+    //width: 100%;
+    box-shadow: 0px 3px 11px 0px rgba(149, 81, 27, 0.07);
+    background-color: #fff;
+    padding: 38px 44px;
 
 }
-.icon-pizza {
-    font-size: 45px;
-    width: 1em;
-    height: .9em;
 
+/*-----------------------------*/
+/*-----------------------------*/
+/*-----------------------------*/
+/*-----------------------------*/
+/*-----------------------------*/
+
+//media
+@media (max-width:900px){
+    .menu {
+        margin: 0;
+    }
+}
+
+@media (max-width:800px){
+    .menu {
+        flex-flow: row wrap;
+        justify-content: center;
+        padding: 15px 10px 20px;
+    }
+    .menu .menu-item {
+        padding: 10px;
+        //margin-bottom: 10px;
+        //border: 1px solid #eee;
+        width: 20%;
+    }
+}
+
+
+@media (max-width:600px){
+    .menu .menu-item {
+        padding: 10px;
+        //margin-bottom: 10px;
+        //border: 1px solid #eee;
+        width: 120px;
+    }
+}
+@media (max-width:420px){
+    .menu .menu-item {
+        width: 33%;
+    }
 }
