@@ -1,5 +1,14 @@
 $(document).ready(function () {
 
+
+
+    $("#flipbook").turn({
+        width: 400,
+        height: 300,
+        autoCenter: true
+    });
+
+
   $(".horizontal-nav_mobile").click(function(){
     $(".horizontal-nav").toggleClass("js-show");
     $(this).toggleClass("js-show-shadow");
