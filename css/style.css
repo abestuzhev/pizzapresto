@@ -12,10 +12,10 @@ body {
   min-height: 100%;
   height: auto !important;
   overflow: hidden;
-  padding-bottom: 234px; }
+  padding-bottom: 198px; }
 
 .presto-footer {
-  margin-top: -234px;
+  margin-top: -198px;
   position: relative; }
 
 @font-face {
@@ -262,15 +262,28 @@ body {
   height: 1.2em; }
 
 .icon-googleplay {
-  font-size: 120px;
+  font-size: 123px;
   width: 1em;
-  height: .29em; }
+  height: .31em; }
 
 .icon-appstore {
-  font-size: 113px;
+  font-size: 119px;
   width: 1em;
-  height: .3em; }
+  height: .32em; }
 
+.icon-inst {
+  font-size: 19px;
+  width: 1em;
+  height: 1em; }
+
+.icon-vk {
+  font-size: 29px;
+  width: 1em;
+  height: .57em; }
+
+/*----------------------------------------*/
+/*----------------------------------------*/
+/*----------------------------------------*/
 .home-section {
   margin: 0 36px; }
 
@@ -387,7 +400,7 @@ body {
       align-content: center; }
 
 .app-download__item {
-  margin-right: 20px; }
+  margin-right: 10px; }
 
 .app-download__item:last-child {
   margin-right: 0; }
@@ -521,7 +534,6 @@ body {
   height: 100%; }
 
 .presto-footer {
-  height: 234px;
   background-color: #fff;
   padding: 30px 0;
   font-family: 'MuseoSans', sans-serif; }
@@ -534,9 +546,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -544,7 +556,7 @@ body {
   margin-bottom: 26px; }
 
 .presto-footer__info {
-  width: 32%; }
+  width: 27%; }
 
 .presto-footer-phone__title {
   font-size: 16px;
@@ -565,7 +577,7 @@ body {
   line-height: 1; }
 
 .presto-footer-menu {
-  width: 40%;
+  width: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -590,9 +602,38 @@ body {
   font-family: 'MuseoSans', sans-serif;
   display: inline-block;
   color: #272626;
-  padding: 5px 0; }
+  padding: 5px 0;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  text-decoration: none; }
+  .presto-footer-menu__item a:hover {
+    color: #ff892a;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out; }
 
-.presto-footer__footer {
+.presto-footer__other {
+  width: 28%; }
+
+.presto-footer-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px; }
+
+.presto-footer-social__item {
+  margin-right: 17px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -603,12 +644,52 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .presto-footer-social__item:last-child {
+    margin-right: 0; }
+  .presto-footer-social__item:hover a {
+    color: #ff892a;
+    text-decoration: none;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out; }
+  .presto-footer-social__item:hover svg {
+    fill: #ff892a;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out; }
+
+.presto-footer-social__item a {
+  color: #383838;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
+
+.presto-footer-social__item svg {
+  margin-right: 5px;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
+
+.presto-footer__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch; }
 
 .presto-footer__copyright {
-  width: 32%; }
+  width: 27%; }
 
 .presto-footer__copyright span {
   display: block;
@@ -633,6 +714,11 @@ body {
   margin-right: 20px; }
   .presto-footer__footer .presto-footer-menu__item:last-child {
     margin-right: 0; }
+
+.presto-footer__ref {
+  color: #afadad;
+  font-size: 11px;
+  width: 28%; }
 
 /*-----------------------------*/
 /*-----------------------------*/

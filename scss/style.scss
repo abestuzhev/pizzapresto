@@ -14,11 +14,11 @@ body {
     min-height: 100%;
     height: auto !important;
     overflow: hidden;
-    padding-bottom: 234px;
+    padding-bottom: 198px;
 }
 
 .presto-footer {
-    margin-top: -234px;
+    margin-top: -198px;
     position: relative;
 }
 
@@ -310,18 +310,40 @@ body {
 }
 
 .icon-googleplay {
-    font-size: 120px;
+    font-size: 123px;
     width: 1em;
-    height: .29em;
+    height: .31em;
 
 }
 
 .icon-appstore {
-    font-size: 113px;
+    font-size: 119px;
     width: 1em;
-    height: .3em;
+    height: .32em;
 
 }
+
+
+.icon-inst {
+    font-size: 19px;
+    width: 1em;
+    height: 1em;
+
+}
+
+.icon-vk {
+    font-size: 29px;
+    width: 1em;
+    height: .57em;
+
+}
+
+
+
+
+/*----------------------------------------*/
+/*----------------------------------------*/
+/*----------------------------------------*/
 
 .home-section {
     margin: 0 36px;
@@ -436,7 +458,7 @@ body {
 }
 
 .app-download__item {
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .app-download__item:last-child {
@@ -585,7 +607,7 @@ body {
 
 
 .presto-footer {
-    height: 234px;
+    //height: 234px;
     background-color: #fff;
     padding: 30px 0;
     font-family: 'MuseoSans', sans-serif;
@@ -594,7 +616,7 @@ body {
 .presto-footer__body {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: stretch;
     color: #272626;
     margin-bottom: 26px;
@@ -602,7 +624,7 @@ body {
 
 .presto-footer__info {
     //width: 40%;
-    width: 32%;
+    width: 27%;
 }
 
 .presto-footer-phone {
@@ -631,7 +653,7 @@ body {
 }
 
 .presto-footer-menu {
-    width: 40%;
+    width: 45%;
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-start;
@@ -653,23 +675,74 @@ body {
     display: inline-block;
     color: #272626;
     padding: 5px 0;
+    transition:all .2s ease-in-out;
+
+    text-decoration: none;
+
+    &:hover {
+        color: #ff892a;
+        transition:all .2s ease-in-out;
+    }
 }
 
-.presto-footer__social {
+.presto-footer__other {
+    width: 28%;
+}
 
+.presto-footer-social {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.presto-footer-social__item {
+    margin-right: 17px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover a {
+        color: #ff892a;
+        text-decoration: none;
+        transition:all .2s ease-in-out;
+    }
+
+    &:hover svg {
+        fill: #ff892a;
+        transition:all .2s ease-in-out;
+    }
+}
+
+.presto-footer-social__item a {
+    color: #383838;
+    transition:all .2s ease-in-out;
+
+}
+
+
+.presto-footer-social__item svg {
+    margin-right: 5px;
+    transition:all .2s ease-in-out;
 }
 
 
 .presto-footer__footer {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: stretch;
 
 }
 
 .presto-footer__copyright {
-    width: 32%;
+    width: 27%;
 }
 .presto-footer__copyright span {
     display: block;
@@ -689,6 +762,13 @@ body {
     &:last-child {
         margin-right: 0;
     }
+}
+
+
+.presto-footer__ref {
+    color: #afadad;
+    font-size: 11px;
+    width: 28%;
 }
 
 /*-----------------------------*/
