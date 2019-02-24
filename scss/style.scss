@@ -338,12 +338,291 @@ body {
 
 }
 
+.logo-presto {
+    font-size: 160px;
+    width: 1em;
+    height: .5em;
+}
+
+.icon-basket {
+    font-size: 20px;
+    width: 1em;
+    height: 1em;
+}
 
 
 
 /*----------------------------------------*/
 /*----------------------------------------*/
 /*----------------------------------------*/
+
+.sticky {
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 102px;
+}
+
+.presto-header-layout {
+    background-color: #fff;
+
+    position: sticky;
+    z-index: 10;
+    top: -1px;
+    margin:0;
+}
+.presto-header-sticky {
+    position: relative;
+}
+.sticky.presto-header-sticky {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+    right: 0;
+    z-index: 99999999999999999999;
+
+    position: fixed;
+    top: 0;
+    //width: 100%;
+    background-color: #fff;
+    box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
+}
+
+
+.sticky.presto-header-sticky .layout {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    //width: 1128px;
+    width: 1200px;
+    position: relative;
+}
+
+.presto-header-sticky .logo-presto {
+    font-size: 80px;
+    transition: all .2s ease-in-out;
+}
+
+
+.presto-header-sticky .presto-header-logo {
+    //display: none;
+    opacity: 0;
+    position: absolute;
+    transform: scale(0);
+    right: 100%;
+    top: 0;
+}
+
+
+.sticky .presto-header-logo {
+    //display: block;
+    transform: scale(1);
+    opacity: 1;
+    position: static;
+    transform-origin: 16% 50%;
+    transition: transform .2s ease-in-out;
+    //width: 125px;
+}
+
+.presto-header-sticky .presto-header-basket {
+    display: none;
+}
+.sticky .presto-header-basket {
+    //position: static;
+    display: flex;
+    top: 10px;
+}
+
+
+
+
+.presto-header {
+    position: relative;
+    padding: 14px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.presto-header-logo {
+    margin-right: 27px;
+    width: 160px;
+}
+
+.presto-header-body {
+
+}
+
+.presto-header-menu {
+    padding: 10px 0;
+}
+
+.presto-header-menu__item {
+    display: inline-block;
+    text-decoration: none;
+    color: #383838;
+    font-size: 16px;
+    padding: 4px 6px;
+    transition:all .2s ease-in-out;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover {
+        color: #ff892a;
+        text-decoration: none;
+        transition:all .2s ease-in-out;
+    }
+
+}
+
+.presto-header-line {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.presto-header-basket {
+    position: absolute;
+    right: 0;
+    top: 16px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.city-toggle{
+    position: static;
+    background: #ffe5d0;
+    padding: 6px 20px;
+    color: #ff892a;
+    border-radius: 50px;
+    margin-right: 40px;
+}
+.city-toggle a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 15px;
+    padding: 0 20px;
+}
+.city-toggle a.current-city{
+    white-space: nowrap;
+    line-height: 1;
+    padding: 0;
+    display: block;
+    text-align: center;
+
+}
+.city-toggle a.current-city:after{
+    content: '';
+    border-width: 7px 4px 0 4px;
+    border-color: #ff892a transparent transparent transparent;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 9px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+.city-dropdown{
+    display: none;
+}
+
+.presto-header-delivery {
+
+}
+
+.presto-header-delivery__phone {
+    color: #050505;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.presto-header-delivery__phone span {
+    color: #ff892a;
+}
+
+.presto-header-delivery__work {
+    font-size: 13px;
+}
+
+.presto-header-auth {
+    margin-right: 16px;
+    a {
+        display: inline-block;
+        color: #ff892a;
+        background: #ffe5d0;
+        padding: 4px 16px;
+        font-size: 16px;
+        text-decoration: none;
+        border-radius: 50px;
+        transition: all .1s ease-in-out;
+
+
+        &:hover {
+            transition: all .1s ease-in-out;
+            background-color: #ffd7b6;
+        }
+    }
+
+}
+
+.presto-header-cart {
+    a {
+        display: inline-block;
+        color: #ff892a;
+        background: #ffe5d0;
+        padding: 4px 16px;
+        font-size: 16px;
+        text-decoration: none;
+        border-radius: 50px;
+        text-transform: uppercase;
+        height: 27px;
+        padding: 0 12px;
+        position: relative;
+        transition: all .1s ease-in-out;
+
+
+        &:hover {
+            transition: all .1s ease-in-out;
+            background-color: #ffd7b6;
+        }
+    }
+
+    .cart-toggle .count {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 20px;
+        top: -8px;
+        right: -10px;
+        background: #402217;
+        font-size: 12px;
+        color: #fff;
+    }
+}
+
+.presto-header-cart .icon-basket {
+    fill: #ff892a;
+    position: relative;
+    top: 3px;
+}
+
+/*---------------------------*/
+/*---------------------------*/
+/*---------------------------*/
 
 .home-section {
     margin: 0 36px;
@@ -483,7 +762,7 @@ body {
     width: 82px;
     height: 82px;
     position: absolute;
-    z-index: 10;
+    z-index: 1;
     top: 35%;
     right: 0px;
     box-shadow: 0px 10px 18px 0px rgba(233, 19, 24, 0.18);

@@ -14,6 +14,80 @@
 <body>
 
 <div class="wrapper">
+
+    <header class="presto-header-layout" >
+        <div class="layout">
+            <div class="presto-header">
+                <div class="presto-header-logo">
+                    <a href="#">
+                        <svg class="logo-presto"><use xlink:href="./img/icon/sprite.svg#logo-presto" /></svg>
+                    </a>
+                </div>
+                <div class="presto-header-body">
+                    <div class="presto-header-line">
+                        <div class="city-toggle">
+                            <a href="#" class="current-city">Москва</a>
+                            <div class="city-dropdown">
+                                <ul>
+                                    <li><a href="#">Архангельск</a></li>
+                                    <li><a href="#">Тула</a></li>
+                                    <li><a href="#">Москва</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="presto-header-delivery">
+                            <div class="presto-header-delivery__phone">Доставка: <span>8-800-5-500-900</span></div>
+                            <div class="presto-header-delivery__work">Ежедневно с 10:00 до 22:00</div>
+                        </div>
+
+                    </div>
+                    <div class="presto-header-sticky" id="myHeader">
+                        <div class="layout">
+                            <div class="presto-header-logo">
+                                <a href="#">
+                                    <svg class="logo-presto"><use xlink:href="./img/icon/sprite.svg#logo-presto" /></svg>
+                                </a>
+                            </div>
+                            <nav class="presto-header-menu" >
+                                <a href="" class="presto-header-menu__item">Меню</a>
+                                <a href="" class="presto-header-menu__item">Акции</a>
+                                <a href="" class="presto-header-menu__item">Бонусная система</a>
+                                <a href="" class="presto-header-menu__item">Доставка и оплата</a>
+                                <a href="" class="presto-header-menu__item">Кафе</a>
+                                <a href="" class="presto-header-menu__item">Меню в кафе</a>
+                                <a href="" class="presto-header-menu__item">Контакты</a>
+                            </nav>
+                            <div class="presto-header-basket">
+                                <div class="presto-header-auth">
+                                    <a href="#!/auth">Вход</a>
+                                </div>
+                                <div class="presto-header-cart">
+                                    <a href="#" class="cart-toggle" onclick="$('body').toggleClass('cart-open');$('.menu-toggle,.header-menu').removeClass('act');return false;">
+                                        <svg class="icon-basket"><use xlink:href="./img/icon/sprite.svg#icon-basket" /></svg>
+                                        <span class="count jstore-js-cart-total-count">0</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="presto-header-basket">
+                    <div class="presto-header-auth">
+                        <a href="#!/auth">Вход</a>
+                    </div>
+                    <div class="presto-header-cart">
+                        <a href="#" class="cart-toggle" onclick="$('body').toggleClass('cart-open');$('.menu-toggle,.header-menu').removeClass('act');return false;">
+                            <svg class="icon-basket"><use xlink:href="./img/icon/sprite.svg#icon-basket" /></svg>
+                            <span class="count jstore-js-cart-total-count">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     <div class="layout">
         <div class=" home-section menu">
             <div class="menu-item">
