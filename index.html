@@ -5,6 +5,9 @@
     <title>component</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+    <link rel="stylesheet" href="./css/touch-menu-la.css">
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/service.css">
@@ -18,6 +21,17 @@
     <header class="presto-header-layout">
         <div class="layout">
             <div class="presto-header">
+                <div class="presto-header-hamburger" id="presto-header-hamburger">
+                    <a href="#" class="presto-header-hamburger__link">
+                        <span class="presto-header-hamburger__icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+
+                    </a>
+                </div>
+
                 <div class="presto-header-logo">
                     <a href="#">
                         <svg class="logo-presto">
@@ -28,7 +42,7 @@
                 <div class="presto-header-body">
                     <div class="presto-header-line">
                         <div class="city-toggle">
-                            <a href="#" class="current-city">Москва</a>
+                            <a href="#" class="current-city">Архангельск</a>
                             <div class="city-dropdown">
                                 <ul>
                                     <li><a href="#">Архангельск</a></li>
@@ -45,6 +59,7 @@
                     </div>
                     <div class="presto-header-sticky" id="myHeader">
                         <div class="layout">
+
                             <div class="presto-header-logo">
                                 <a href="#">
                                     <svg class="logo-presto">
@@ -169,7 +184,7 @@
     </header>
     <div class="layout">
 
-        <div class="slider" style="height: 380px; background-color:#eee;width:100%; margin-bottom: -30px;"></div>
+        <div class="slider" style="height: 380px; background:#eee url('./img/1eb42d0f6e2d6fc49b0b44276ca30c8c.jpg') 50% 50% no-repeat; background-size: cover; width:100%; margin-bottom: -30px;"></div>
         <div class=" home-section menu">
             <div class="menu-item">
                 <a href="#" class="menu-item__link">
@@ -245,7 +260,7 @@
             </div>
         </div>
 
-        <div class="home-section">
+        <div class="home-section presto-info">
             <div class="c-grid c-grid-between">
                 <div class="c-col c-col-6">
                     <div class="presto-sale">
@@ -509,8 +524,37 @@
 </footer>
 
 
+<div id="menu" class="touch-menu-la">
+    <div class="inner-header">
+        Touch Menu
+        <span>Like Android</span>
+    </div>
+    <ul class="menu-items">
+        <li>
+            <a href="https://github.com/ericktatsui/Touch-Menu-Like-Android">
+                <i class="fa fa-github"></i> Github
+            </a>
+        </li>
+        <li>
+            <a href="mailto:ericktatsui@gmail.com">
+                <i class="fa fa-envelope"></i> ericktatsui@gmail.com
+            </a>
+        </li>
+    </ul>
+    <div class="inner-footer">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non erat ac leo ultrices blandit sed vel risus. Pellentesque facilisis blandit auctor. Maecenas vestibulum vulputate tincidunt. Mauris nec quam libero. Fusce eget ligula non leo varius condimentum quis ac elit.
+    </div>
+    <div class="inner-footer">
+        <iframe src="https://ghbtns.com/github-btn.html?user=ericktatsui&repo=Touch-Menu-Like-Android&type=star&count=true" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+    </div>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+
+<script src="./js/hammer.js"></script>
+<script src="./js/touch-menu-la.js"></script>
 <script src="./js/component.js"></script>
+
 </body>
 </html>

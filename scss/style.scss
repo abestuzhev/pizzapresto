@@ -9,6 +9,12 @@ body {
     height: 100%;
 }
 
+
+.wrapper .lsp-block-cart {
+    width: 300px;
+    background-color: #fff;
+}
+
 .wrapper {
     position: relative;
     min-height: 100%;
@@ -367,13 +373,23 @@ body {
     padding-top: 102px;
 }
 
+.presto-header-layout.sticky-mobile {
+    left: 0;
+    right: 0;
+    z-index: 99999999999999999999;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
 .presto-header-layout {
     background-color: #fff;
-
     position: sticky;
     z-index: 10;
     top: -1px;
     margin:0;
+
+    font-family: "MuseoSans";
 }
 .presto-header-sticky {
     position: relative;
@@ -401,7 +417,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     //width: 1128px;
-    width: 1200px;
+    width: 1300px;
     position: relative;
 }
 
@@ -409,6 +425,59 @@ body {
     font-size: 80px;
     transition: all .2s ease-in-out;
 }
+
+.presto-header-hamburger {
+    display: none;
+
+    position: relative;
+    //cursor: pointer;
+
+
+
+    &__link {
+        display: block;
+        position: relative;
+
+        width: 23px;
+        height: 17px;
+        padding: 21px 10px;
+    }
+
+    &__icon {
+        width: 18px;
+        height: 16px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+
+        span {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 2px;
+            border-radius: 10px;
+            //background-color: #ED1C24;
+            background-color: #402217;
+            left: 0;
+        }
+
+        span:nth-child(1) {
+            top: 0;
+
+        }
+        span:nth-child(2) {
+            top: 50%;
+            margin-top: -1px;
+        }
+        span:nth-child(3) {
+            bottom: 0;
+        }
+    }
+}
+
 
 
 .presto-header-sticky .presto-header-logo {
@@ -445,7 +514,7 @@ body {
 
 .presto-header {
     position: relative;
-    padding: 14px 0;
+    padding: 14px 0 8px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -492,7 +561,7 @@ body {
     }
 
     &:hover {
-        color: #ff892a;
+        color: #ff2a2a;
         text-decoration: none;
         transition:all .2s ease-in-out;
     }
@@ -519,7 +588,7 @@ body {
 
 .lsp-block-menu-tree li {
     width: 33%;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
 }
 
 .lsp-block-menu-tree a {
@@ -529,7 +598,7 @@ body {
     padding: 4px 6px;
 
     &:hover {
-        color: #ff892a;
+        color: #ff2a2a;
         text-decoration: none;
         transition:all .2s ease-in-out;
     }
@@ -555,9 +624,9 @@ body {
 
 .city-toggle{
     position: static;
-    background: #ffe5d0;
+    background: #fbe1e1;
     padding: 6px 20px;
-    color: #ff892a;
+    color: #ff2a2a;
     border-radius: 50px;
     margin-right: 40px;
 }
@@ -578,7 +647,7 @@ body {
 .city-toggle a.current-city:after{
     content: '';
     border-width: 7px 4px 0 4px;
-    border-color: #ff892a transparent transparent transparent;
+    border-color: #ff2a2a transparent transparent transparent;
     display: inline-block;
     vertical-align: middle;
     margin-left: 9px;
@@ -601,7 +670,7 @@ body {
 }
 
 .presto-header-delivery__phone span {
-    color: #ff892a;
+    color: #ff2a2a;
 }
 
 .presto-header-delivery__work {
@@ -612,8 +681,8 @@ body {
     margin-right: 16px;
     a {
         display: inline-block;
-        color: #ff892a;
-        background: #ffe5d0;
+        color: #ff2a2a;
+        background: #fbe1e1;
         padding: 4px 16px;
         font-size: 16px;
         text-decoration: none;
@@ -623,7 +692,7 @@ body {
 
         &:hover {
             transition: all .1s ease-in-out;
-            background-color: #ffd7b6;
+            background: #ffcdcd;
         }
     }
 
@@ -632,8 +701,8 @@ body {
 .presto-header-cart {
     a {
         display: inline-block;
-        color: #ff892a;
-        background: #ffe5d0;
+        color: #ff2a2a;
+        background: #fbe1e1;
         padding: 4px 16px;
         font-size: 16px;
         text-decoration: none;
@@ -647,7 +716,7 @@ body {
 
         &:hover {
             transition: all .1s ease-in-out;
-            background-color: #ffd7b6;
+            background: #ffcdcd;
         }
     }
 
@@ -667,7 +736,7 @@ body {
 }
 
 .presto-header-cart .icon-basket {
-    fill: #ff892a;
+    fill: #ff2a2a;
     position: relative;
     top: 3px;
 }
@@ -718,7 +787,7 @@ body {
 
 
 .menu-item__link:hover {
-    color: #ff892a;
+    color: #ff2a2a;
     transition: all .1s ease-in-out;
 }
 
@@ -783,7 +852,7 @@ body {
 
 .app-download {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: flex-start;
     align-content: center;
 }
@@ -938,13 +1007,17 @@ body {
 /*--------------------------*/
 /*--------------------------*/
 /*--------------------------*/
+
+.presto-info {
+    margin-bottom: 20px;
+}
+
 .presto-sale {
     font-family: 'MuseoSans', sans-serif;
     padding: 20px 30px;
-    background-color: #ffe5d0;
+    background-color: #fbe1e1;
     border-radius: 10px;
-    margin-bottom: 20px;
-    height: auto;
+    height: 100%;
 }
 
 .presto-sale__title {
@@ -1032,9 +1105,8 @@ body {
     font-family: 'MuseoSans', sans-serif;
     padding: 20px 30px;
     border-radius: 10px;
-    margin-bottom: 20px;
     background-color: #d9f6e2;
-    height: auto;
+    height: 100%;
 }
 
 .presto-delivery__title {
@@ -1152,7 +1224,7 @@ body {
     text-decoration: none;
 
     &:hover {
-        color: #ff892a;
+        color: #ff2a2a;
         transition:all .2s ease-in-out;
     }
 }
@@ -1181,13 +1253,13 @@ body {
     }
 
     &:hover a {
-        color: #ff892a;
+        color: #ff2a2a;
         text-decoration: none;
         transition:all .2s ease-in-out;
     }
 
     &:hover svg {
-        fill: #ff892a;
+        fill: #ff2a2a;
         transition:all .2s ease-in-out;
     }
 }
@@ -1250,6 +1322,11 @@ body {
 /*-----------------------------*/
 
 //media
+@media (max-width:1360px){
+    .presto-header-layout {
+        padding: 0 36px;
+    }
+}
 @media (max-width:1240px){
     .presto-header-layout {
         padding: 0 14px;
@@ -1262,10 +1339,39 @@ body {
     .presto-header-sticky {
         padding: 0 14px;
     }
+
+    .presto-advantages-card {
+        padding: 24px 26px;
+    }
+
+    .presto-advantages__list {
+        margin-left: -4px;
+        margin-right: -4px;
+    }
+
+    .presto-advantages__item {
+        padding: 4px
+    }
+
+    .presto-advantages-card__title {
+        font-size: 18px;
+    }
 }
 
 @media (max-width:1000px){
+    .presto-footer__footer {
+        justify-content: flex-start;
+        flex-flow: row wrap;
+    }
 
+    .presto-footer__ref {
+        flex: 0 1 100%;
+        margin-top: 7px;
+    }
+
+    .app-download__item {
+        margin-right: 5px;
+    }
 }
 
 @media (max-width:900px){
@@ -1274,6 +1380,116 @@ body {
     }
 }
 
+@media (max-width:980px){
+    .presto-info > .c-grid {
+        display: block;
+    }
+    .presto-info .c-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .presto-advantages-card {
+        padding: 18px 20px;
+    }
+
+    .presto-header-delivery,
+    .presto-header-menu {
+        display: none;
+    }
+
+    .presto-header {
+        padding: 6px 0 5px;
+    }
+    .presto-header-sticky {
+        display: none !important;
+    }
+
+    .logo-presto {
+        font-size: 80px;
+    }
+
+    .presto-header-logo {
+        width: auto;
+    }
+
+    .sticky.presto-header-sticky {
+        padding: 14px 0 8px;
+    }
+
+    .presto-header-line {
+        margin-bottom: 0;
+    }
+
+    .presto-header-hamburger {
+        display: block;
+    }
+
+    .presto-header-layout {
+        padding: 0 14px 0 0;
+    }
+
+    .presto-header-hamburger__link {
+        padding: 21px 0 21px 44px;
+    }
+
+    .presto-header-logo {
+        margin-right: 14px;
+        margin-left: -4px;
+    }
+
+}
+@media (max-width:960px){
+
+    .presto-footer__footer {
+        //justify-content: center;
+        width: auto;
+    }
+
+    .presto-footer-social {
+        margin: 0 20px 0 0;
+    }
+
+    .presto-footer__body {
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+
+    .presto-footer__copyright,
+    .presto-footer__info {
+        width: 33%;
+    }
+
+    .presto-footer__other {
+        flex: 0 1 100%;
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 33%;
+    }
+
+    .presto-footer__ref {
+        text-align: center;
+    }
+
+    .presto-footer-menu {
+        width: auto;
+        margin-bottom: 14px;
+    }
+
+    .presto-footer .home-section {
+        margin: 0 14px 0;
+    }
+
+    .presto-footer-menu__item a {
+        white-space: nowrap;
+    }
+
+
+
+}
+@media (max-width:880px){
+
+}
 @media (max-width:800px){
     .menu {
         flex-flow: row wrap;
@@ -1288,6 +1504,111 @@ body {
     }
 }
 
+@media (max-width:790px){
+    .presto-footer__body {
+        display: block;
+        margin-bottom: 14px;
+    }
+
+    .presto-footer__info {
+        margin-bottom: 14px;
+    }
+
+    .presto-footer__copyright,
+    .presto-footer__info {
+        width: 100%;
+    }
+
+
+
+
+    .presto-footer__info {
+        text-align: center;
+    }
+
+    .presto-footer-menu {
+        display: block;
+        text-align: center;
+    }
+
+    .presto-footer-menu__list {
+        margin-right: 0;
+        display: inline-block;
+    }
+
+    .presto-footer-menu__item {
+        display: inline-block;
+    }
+
+    .presto-footer-menu__item a {
+        padding: 4px 10px;
+    }
+
+    .presto-footer__other {
+        padding: 0;
+        text-align: center;
+        flex-flow: column wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .presto-footer-social {
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        margin-bottom: 8px;
+    }
+
+    .presto-footer-social__item {
+        padding: 0 8px;
+        margin: 0 0 8px 0;
+    }
+
+    .app-download {
+        justify-content: center;
+    }
+
+    .presto-footer__copyright {
+        text-align: center;
+        margin-bottom: 6px;
+    }
+
+    .presto-footer__copyright span {
+        display: inline-block;
+    }
+
+    .presto-footer-menu {
+        width: 100%;
+        text-align: center;
+    }
+
+    .presto-footer__footer .presto-footer-menu {
+        margin-bottom: 0;
+    }
+
+    .presto-footer__footer .presto-footer-menu__list {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width:780px){
+    .presto-advantages__list {
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .presto-advantages__item {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    .presto-advantages-card__title {
+        margin-bottom: 7px;
+    }
+}
 
 @media (max-width:600px){
     .menu .menu-item {
@@ -1296,7 +1617,28 @@ body {
         //border: 1px solid #eee;
         width: 120px;
     }
+
+    .presto-footer {
+        padding: 20px 0;
+    }
 }
+
+@media (max-width:450px){
+    .presto-header-auth {
+        display: none;
+    }
+
+    .presto-header-logo {
+        margin-right: 8px;
+        margin-left: -6px;
+    }
+
+    .city-toggle {
+        margin-right: 0;
+        padding: 6px 12px;
+    }
+}
+
 @media (max-width:420px){
     .menu .menu-item {
         width: 33%;

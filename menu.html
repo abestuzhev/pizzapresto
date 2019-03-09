@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>component</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/service.css">
+    <link rel="stylesheet" href="./css/component.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link href="//deliveryWiget.iiko.ru/v2_0/assets/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+
+
+    <script type="text/javascript">
+        window.jStoreConfig = {
+            //'restaurant' : "660f9480-787e-11e5-80c1-d8d385655247",
+            'restaurant' : "44e4dda6-02c4-11e5-80c1-d8d385655247",
+            'terminalId': '010bf12c-119b-23b8-0152-7e79ad517f5d',
+            'cityId': '',
+            'urls' : {
+                'documentRoot' : '/menu/',
+
+            },
+            'loc': {
+                'energy_sum':'Состав',
+                'Nutritional_value':'Состав',
+                'Total':'Итого',
+                'Delivery_to_House':'<span>Доставка на дом</span>',
+                'Take_from_Rest':'<span>Забрать из ресторана</span>'
+            },
+            'templates' : [
+                {
+                    'type': 'itemPopUp',
+                    'template': '#custom-popup'
+                },
+                {
+                    'type': 'recommendationBlock#top_recommendations',
+                    'class': 'test',
+                    'properties': {
+                        'sliderUse': true,
+                        'visible': ['cart'] ,
+                        'sliderConfig': {
+                            infinite: true,
+                            variableWidth: true,
+                            autoplay : true,
+                            autoplaySpeed : 4000,
+                            prevArrow : '<span class="lsp-slider-prev"><</span>',
+                            nextArrow : '<span class="lsp-slider-next">></span>',
+                            slidesToShow: 4,
+                            slidesToScroll: 1
+                        }
+                    }
+                },
+                {
+                    'type': 'lastPurchases#top_lastPurchases',
+                    'class': 'test',
+                    'properties': {
+                        'sliderUse': true,
+                        'showLastPurchases': true,
+                        'sliderConfig': {
+                            infinite: true,
+                            variableWidth: true,
+                            autoplay : true,
+                            autoplaySpeed : 4000,
+                            prevArrow : '<span class="lsp-slider-prev"><</span>',
+                            nextArrow : '<span class="lsp-slider-next">></span>',
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                },
+                {
+                    'type': 'itemsFilter#first',
+                    'class': 'product-items',
+                    'properties': {
+                        //'categories': ['e44eb9f0-ca1d-44d0-97ed-8dde00b51ec6'],
+                        'sliderUse': false,
+                        'tags': ['novinka']
+                    }
+                },
+                {
+                    'type': 'itemsFilter#second',
+                    'class': 'product-items',
+                    'properties': {
+                        //'categories': ['5e0b9d85-7388-4e94-9646-14547552d28b'],
+                        'sliderUse': false,
+                        'tags': ['populyarnoe']
+                    }
+                },
+                {
+                    'type': 'itemsFilter#third',
+                    'class': 'product-items',
+                    'properties': {
+                        'categories': ['f367c246-997a-454e-a6e4-f7833c415a12'],
+                        'sliderUse': false
+                    }
+                },
+                {
+                    'type' : 'userRegister',
+                    'properties': {
+                        'showInPopUp' : true
+                    }
+                },
+                {
+                    'type' : 'userRememberPassword',
+                    'properties': {
+                        'showInPopUp' : true
+                    }
+                },
+                {
+                    'type' : 'userPersonalEdit',
+                    'properties': {
+                        'showInPopUp' : true
+                    }
+                },
+                {
+                    'type' : 'userAuth',
+                    'properties': {
+                        'showInPopUp' : true
+                    }
+                },
+                {
+                    'type': 'checkOrder',
+                    'properties': {
+                        'showInPopUp' : true
+                    }
+                },
+                {
+                    'type': 'orderSuccess',
+                    'properties': {
+                        'showInPopUp' : true
+                    }
+                },
+            ]
+        };
+    </script>
+    <script data-main="//deliverywiget.iiko.ru/v2_0/app/config" src="//deliverywiget.iiko.ru/v2_0/libs/require.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+
+    <header class="presto-header-layout">
+        <div class="layout">
+            <div class="presto-header">
+                <div class="presto-header-logo">
+                    <a href="#">
+                        <svg class="logo-presto">
+                            <use xlink:href="./img/icon/sprite.svg#logo-presto"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="presto-header-body">
+                    <div class="presto-header-line">
+                        <div class="city-toggle">
+                            <a href="#" class="current-city">Москва</a>
+                            <div class="city-dropdown">
+                                <ul>
+                                    <li><a href="#">Архангельск</a></li>
+                                    <li><a href="#">Тула</a></li>
+                                    <li><a href="#">Москва</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="presto-header-delivery">
+                            <div class="presto-header-delivery__phone">Доставка: <span>8-800-5-500-900</span></div>
+                            <div class="presto-header-delivery__work">Ежедневно с 10:00 до 22:00</div>
+                        </div>
+
+                    </div>
+                    <div class="presto-header-sticky" id="myHeader">
+                        <div class="layout">
+                            <div class="presto-header-logo">
+                                <a href="#">
+                                    <svg class="logo-presto">
+                                        <use xlink:href="./img/icon/sprite.svg#logo-presto"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <nav class="presto-header-menu">
+                                <li class="presto-header-menu__item">
+                                    <a href="" class="presto-header-menu__link">Меню</a>
+                                    <ul id="lsp-block-tree" class="lsp-block-menu-tree jstore-tag" data-page="index">
+                                        <li class="jstore-tag" data-id="e44eb9f0-ca1d-44d0-97ed-8dde00b51ec6"><a
+                                                href="http://pizzapresto.ru/menu/#!/Pitstsa"
+                                                class="jstore-tag lsp-js-block-tree-item"
+                                                data-id="e44eb9f0-ca1d-44d0-97ed-8dde00b51ec6">Пицца</a>
+                                        </li>
+                                        <li class="jstore-tag" data-id="5e0b9d85-7388-4e94-9646-14547552d28b"><a
+                                                href="http://pizzapresto.ru/menu/#!/Sushi"
+                                                class="jstore-tag lsp-js-block-tree-item"
+                                                data-id="5e0b9d85-7388-4e94-9646-14547552d28b">Суши</a>
+                                        </li>
+                                        <li class="jstore-tag" data-id="5af1e26b-17fe-42cb-a47c-73043ec058aa"><a
+                                                href="http://pizzapresto.ru/menu/#!/Salaty"
+                                                class="jstore-tag lsp-js-block-tree-item"
+                                                data-id="5af1e26b-17fe-42cb-a47c-73043ec058aa">Салаты</a>
+                                        </li>
+                                        <li class="jstore-tag" data-id="429d0f65-75a7-4f12-87cc-062ac0b948a0"><a
+                                                href="http://pizzapresto.ru/menu/#!/Supy"
+                                                class="jstore-tag lsp-js-block-tree-item"
+                                                data-id="429d0f65-75a7-4f12-87cc-062ac0b948a0">Супы</a>
+                                        </li>
+                                        <li class="jstore-tag" data-id="79bad967-28a3-4e86-a3be-fd6b365e6b65"><a
+                                                href="http://pizzapresto.ru/menu/#!/Pasta"
+                                                class="jstore-tag lsp-js-block-tree-item"
+                                                data-id="79bad967-28a3-4e86-a3be-fd6b365e6b65">Паста</a>
+                                        </li>
+                                        <li class="jstore-tag" data-id="8eb3f79b-fb59-4e10-ba3b-aaf63ab57de7"><a
+                                                href="http://pizzapresto.ru/menu/#!/Goryachee"
+                                                class="jstore-tag lsp-js-block-tree-item"
+                                                data-id="8eb3f79b-fb59-4e10-ba3b-aaf63ab57de7">Горячее</a>
+                                        </li>
+                                        <li class="jstore-tag" data-id="d8a38ed8-c407-4411-b757-1aa3ad2014f9"><a
+                                                href="http://pizzapresto.ru/menu/#!/Garniry"
+                                                class="jstore-tag lsp-js-block-tree-item"
+                                                data-id="d8a38ed8-c407-4411-b757-1aa3ad2014f9">Гарниры</a>
+                                        </li>
+                                        <li class="jstore-tag" data-id="cbb7a9a4-b48f-4565-86e5-14627dc604d8"><a
+                                                href="http://pizzapresto.ru/menu/#!/Napitki"
+                                                class="jstore-tag lsp-js-block-tree-item"
+                                                data-id="cbb7a9a4-b48f-4565-86e5-14627dc604d8">Напитки</a>
+                                        </li>
+                                        <li class="jstore-tag" data-id="5aac652a-1efd-4776-bbfe-f1b2d12d5be0"><a
+                                                href="http://pizzapresto.ru/menu/#!/Dopolnitelno"
+                                                class="jstore-tag lsp-js-block-tree-item"
+                                                data-id="5aac652a-1efd-4776-bbfe-f1b2d12d5be0">Дополнительно</a>
+                                        </li>
+                                        <li class="jstore-tag" data-id="849c49e8-6dfa-4405-aec6-266f616df98c"><a
+                                                href="http://pizzapresto.ru/menu/#!/Sertifikaty"
+                                                class="jstore-tag lsp-js-block-tree-item"
+                                                data-id="849c49e8-6dfa-4405-aec6-266f616df98c">Сертификаты</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="presto-header-menu__item"><a href=""
+                                                                        class="presto-header-menu__link">Акции</a></li>
+                                <li class="presto-header-menu__item"><a href="" class="presto-header-menu__link">Бонусы</a></li>
+                                <li class="presto-header-menu__item"><a href="" class="presto-header-menu__link">Доставка и оплата</a></li>
+                                <li class="presto-header-menu__item"><a href="" class="presto-header-menu__link">Кафе</a></li>
+                                <li class="presto-header-menu__item"><a href="" class="presto-header-menu__link">Меню в кафе</a></li>
+                                <li class="presto-header-menu__item"><a href="" class="presto-header-menu__link">Контакты</a>
+                                </li>
+                            </nav>
+                            <!--<nav class="presto-header-menu menu-scroll">-->
+                            <!--<a href="" class="presto-header-menu__link">Пицца</a>-->
+                            <!--<a href="" class="presto-header-menu__link">Суши</a>-->
+                            <!--<a href="" class="presto-header-menu__link">Салаты</a>-->
+                            <!--<a href="" class="presto-header-menu__link">Супы</a>-->
+                            <!--<a href="" class="presto-header-menu__link">Пасты</a>-->
+                            <!--<a href="" class="presto-header-menu__link">Горячее</a>-->
+                            <!--<a href="" class="presto-header-menu__link">Гарниры</a>-->
+                            <!--<a href="" class="presto-header-menu__link">Напитки</a>-->
+                            <!--<a href="" class="presto-header-menu__link">Соусы</a>-->
+                            <!--<a href="" class="presto-header-menu__link">Сертификаты</a>-->
+                            <!--</nav>-->
+                            <div class="presto-header-basket">
+                                <div class="presto-header-auth">
+                                    <a href="#!/auth">Вход</a>
+                                </div>
+                                <div class="presto-header-cart">
+                                    <div id="lsp-block-cart" class="lsp-block-cart"></div>
+                                    <a href="#" class="cart-toggle"
+                                       onclick="$('body').toggleClass('cart-open');$('.menu-toggle,.header-menu').removeClass('act');return false;">
+                                        <svg class="icon-basket">
+                                            <use xlink:href="./img/icon/sprite.svg#icon-basket"/>
+                                        </svg>
+                                        <span class="count jstore-js-cart-total-count">0</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="presto-header-basket">
+                    <div class="presto-header-auth">
+                        <a href="#!/auth">Вход</a>
+                    </div>
+                    <div class="presto-header-cart">
+                        <div id="lsp-block-cart" class="lsp-block-cart"></div>
+                        <a href="#" class="cart-toggle"
+                           onclick="$('body').toggleClass('cart-open');$('.menu-toggle,.header-menu').removeClass('act');return false;">
+                            <svg class="icon-basket">
+                                <use xlink:href="./img/icon/sprite.svg#icon-basket"/>
+                            </svg>
+                            <span class="count jstore-js-cart-total-count">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <div id="lsp-block-gift" class="lsp-block-gift"></div>
+        <div class="order-cart lsp-block-cart" data-template="order-cart-header-template" style="display: none;">
+            <div class="cart-inner">
+                <div class="cart-list">
+                    <div  style="height: 280px; ">
+                        <p>Подождите, меню загружается...</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="lsp-block-content" class="lsp-block-content">
+            <div  style="height: 280px;"><p>Подождите, меню загружается...</p></div>
+        </div>
+    </div>
+
+</div>
+</div>
+<footer class="presto-footer">
+    <div class="layout">
+        <div class="home-section">
+            <div class="presto-footer__body">
+                <div class="presto-footer__info">
+                    <div class="presto-footer-phone">
+                        <div class="presto-footer-phone__title">Телефон доставки</div>
+                        <div class="presto-footer-phone__num"><a href="tel:88005500900">8-800-5-500-900</a></div>
+                        <div class="presto-footer-phone__work">Ежедневно с 11:00 до 22:30</div>
+                    </div>
+                </div>
+                <div class="presto-footer-menu">
+                    <ul class="presto-footer-menu__list">
+                        <li class="presto-footer-menu__item"><a href="#">О нас</a></li>
+                        <li class="presto-footer-menu__item"><a href="#">Пиццерии</a></li>
+                        <li class="presto-footer-menu__item"><a href="#">Акции</a></li>
+                    </ul>
+                    <ul class="presto-footer-menu__list">
+                        <li class="presto-footer-menu__item"><a href="#">Бонусы</a></li>
+                        <li class="presto-footer-menu__item"><a href="#">Доставка и оплата</a></li>
+                        <li class="presto-footer-menu__item"><a href="#">Отзывы</a></li>
+                    </ul>
+                    <ul class="presto-footer-menu__list">
+                        <li class="presto-footer-menu__item"><a href="#">Вакансии</a></li>
+                        <li class="presto-footer-menu__item"><a href="#">Контакты</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="presto-footer__other">
+                    <div class="presto-footer-social">
+                        <div class="presto-footer-social__item">
+                            <svg class="icon-inst">
+                                <use xlink:href="./img/icon/sprite.svg#icon-inst"/>
+                            </svg>
+                            <a href="https://www.instagram.com/pizzapresto/">Instagram</a>
+                        </div>
+                        <div class="presto-footer-social__item">
+                            <svg class="icon-vk">
+                                <use xlink:href="./img/icon/sprite.svg#icon-vk"/>
+                            </svg>
+                            <a href="https://vk.com/pizzapresto">ВКонтакте</a>
+                        </div>
+                    </div>
+                    <div class="app-download">
+                        <div class="app-download__item">
+                            <a href="#">
+                                <!--<svg class="icon-googleplay"><use xlink:href="./img/icon/sprite.svg#icon-googleplay" /></svg>-->
+                                <img class="icon-googleplay" src="./img/icon/icon-googleplay.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="app-download__item">
+                            <a href="#">
+                                <!--<svg class="icon-appstore"><use xlink:href="./img/icon/sprite.svg#icon-appstore" /></svg>-->
+                                <img class="icon-appstore" src="./img/icon/icon-appstore.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="presto-footer__footer">
+                <div class="presto-footer__copyright">
+                    <span>© 2019 Пиццерия Престо™</span>
+                    <span>Все права защищены</span>
+                </div>
+                <div class="presto-footer-menu">
+                    <ul class="presto-footer-menu__list">
+                        <li class="presto-footer-menu__item"><a href="#">Калорийность</a></li>
+                        <li class="presto-footer-menu__item"><a href="#">Соглашение</a></li>
+                        <li class="presto-footer-menu__item"><a href="#">Конфиденциональность</a></li>
+                    </ul>
+                </div>
+                <div class="presto-footer__ref">
+                    *Внешний вид и подача блюд могут отличаться
+                    от фотографий, представленных в меню на сайте.
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+<script src="./js/component.js"></script>
+</body>
+</html>
