@@ -741,6 +741,94 @@ body {
     top: 3px;
 }
 
+
+
+
+/*---------------------------*/
+/*---------------------------*/
+/*---------------------------*/
+
+.header-mobile {
+    font-family: 'MuseoSans', sans-serif;
+    padding: 10px 0;
+}
+
+.header-mobile-menu {
+    background-color: #fff;
+    //margin-bottom: 14px;
+}
+
+.header-mobile-menu__item {
+    //border-bottom: 1px solid #fbe1e1;
+}
+
+.header-mobile-menu__link {
+    display: block;
+    padding: 12px 14px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #402217;
+
+    &:hover {
+        color: #ff2a2a;
+        transition: all .1s ease-in-out;
+    }
+}
+
+.header-mobile-contact {
+    padding: 12px 14px;
+}
+
+.header-mobile-contact .presto-header-auth {
+    margin: 0;
+    padding: 0 0 14px;
+}
+
+.header-mobile-contact .presto-header-auth a {
+    padding: 0;
+    background-color: transparent;
+}
+
+.header-mobile-social {
+    padding: 0 14px 14px;
+}
+
+.social-compact {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.social-compact__item {
+    padding: 2px 2px;
+    margin-right: 6px;
+}
+
+.social-compact__item a {
+    display: block;
+    //border: 1px solid #000;
+    position: relative;
+    width: 30px;
+    height: 30px;
+
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%,-50%);
+
+        :hover {
+            
+        }
+    }
+}
+//
+//.social-compact .icon-vk {
+//    font-size: 25px;
+//}
+
+
 /*---------------------------*/
 /*---------------------------*/
 /*---------------------------*/
@@ -1393,8 +1481,8 @@ body {
         padding: 18px 20px;
     }
 
-    .presto-header-delivery,
-    .presto-header-menu {
+    .presto-header .presto-header-delivery,
+    .presto-header .presto-header-menu {
         display: none;
     }
 

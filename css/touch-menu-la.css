@@ -5,6 +5,10 @@
     top: 55px;
     left: -280px;
     background-color: #FFF;
+    overflow: hidden;
+    overflow-y: auto;
+
+    background-color: #f7f3ef;
 }
 
 .touch-menu-la .tmla-handle {
