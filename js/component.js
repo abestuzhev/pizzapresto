@@ -23,22 +23,21 @@ var TouchMenu = TouchMenuLA({
     target: document.getElementById('menu')
 });
 
-document.getElementById('presto-header-hamburger').addEventListener('click', function(){
+document.getElementById('presto-header-hamburger').addEventListener('click', function () {
     TouchMenu.toggle();
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     var obg = $('.presto-header-sticky').offset().top;
     // console.log('obg: ' + obg);
 
 
-
     var yourNavigation = $(".presto-header-sticky");
     stickyDiv = "sticky";
 
-    $(window).scroll(function() {
-        if( $(this).scrollTop() > obg ) {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > obg) {
             yourNavigation.addClass(stickyDiv);
         } else {
             yourNavigation.removeClass(stickyDiv);
@@ -53,7 +52,7 @@ $(document).ready(function() {
         fixedMobileMenu()
     });
 
-    function fixedMobileMenu(){
+    function fixedMobileMenu() {
         var headerMobile = $('.presto-header-layout');
         var headerMobileHeight = headerMobile.height();
         var footerHeight = $('.presto-footer').height();
@@ -68,12 +67,12 @@ $(document).ready(function() {
             'margin-top': -footerHeight
         });
 
-        if($(window).width() < 980){
+        if ($(window).width() < 980) {
             headerMobile.addClass('sticky-mobile');
             $('.wrapper').css({
                 'padding-top': headerMobileHeight
             });
-        }else {
+        } else {
             headerMobile.removeClass('sticky-mobile');
             $('.wrapper').css({
                 'padding-top': 0
@@ -83,5 +82,24 @@ $(document).ready(function() {
 
     };
 
+    $('.header-mobile-menu__link.has-child').on('click', function (e) {
+        e.preventDefault();
+        $(this).siblings('ul').toggleClass('is-show');
+        $(this).toggleClass('active');
+    });
+
+
+    $('div').each(function () {
+        if ($('.touch-menu-la').hasClass('opened')) {
+            $('body').addClass('is-lock');
+            console.log('open');
+        } else {
+            $('body').removeClass('is-lock');
+            console.log('no open');
+        }
+    });
+
 
 });
+
+

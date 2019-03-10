@@ -157,6 +157,7 @@ var TouchMenuLA = function (options) {
         currentPos = options.width;
         this.isVisible = true;
 
+        $('body').addClass('is-lock');
         self.showMask();
         self.invoke(options.onOpen);
     };
@@ -165,7 +166,7 @@ var TouchMenuLA = function (options) {
         options.target.className = menuClassName + " tmla-menu closed";
         currentPos = 0;
         self.isVisible = false;
-
+        $('body').removeClass('is-lock');
         self.hideMask();
         self.invoke(options.onClose);
     };

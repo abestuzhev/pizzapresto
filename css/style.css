@@ -25,6 +25,9 @@ body {
 .layout {
   max-width: 1300px; }
 
+.is-lock {
+  overflow: hidden; }
+
 @font-face {
   font-family: "MuseoSansRegular";
   src: url("../fonts/MuseoSansRegular.eot");
@@ -294,6 +297,11 @@ body {
   height: .5em; }
 
 .icon-basket {
+  font-size: 20px;
+  width: 1em;
+  height: 1em; }
+
+.icon-arrows-down {
   font-size: 20px;
   width: 1em;
   height: 1em; }
@@ -672,7 +680,8 @@ body {
   padding: 10px 0; }
 
 .header-mobile-menu {
-  background-color: #fff; }
+  background-color: #fff;
+  padding: 10px 0; }
 
 .header-mobile-menu__link {
   display: block;
@@ -685,6 +694,52 @@ body {
     -webkit-transition: all .1s ease-in-out;
     -o-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out; }
+  .header-mobile-menu__link.has-child {
+    position: relative;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out; }
+    .header-mobile-menu__link.has-child::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      margin-top: -8px;
+      right: 16px;
+      width: 16px;
+      height: 16px;
+      -webkit-transition: all .2s ease-in-out;
+      -o-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      background: url(../img/icon/icon-arrow-down.svg) 0 0 no-repeat; }
+    .header-mobile-menu__link.has-child.active::after {
+      content: '';
+      -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+              transform: rotate(180deg);
+      -webkit-transform-origin: 50% 50%;
+          -ms-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      -webkit-transition: all .2s ease-in-out;
+      -o-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out; }
+
+.header-mobile .lsp-block-menu-tree {
+  display: none;
+  width: auto;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  position: static;
+  padding: 0 10px 0 20px; }
+
+.header-mobile .lsp-block-menu-tree a {
+  display: block;
+  padding: 3px 12px; }
+
+.header-mobile .lsp-block-menu-tree.is-show {
+  display: block !important; }
+
+.header-mobile .lsp-block-menu-tree li {
+  width: 100%; }
 
 .header-mobile-contact {
   padding: 12px 14px; }
@@ -1076,9 +1131,30 @@ body {
 
 .presto-delivery__desc {
   font-size: 16px;
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin-bottom: 8px; }
   .presto-delivery__desc a {
     color: #dd9626; }
+
+.presto-delivery__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.presto-delivery__col {
+  margin-right: 30px; }
+  .presto-delivery__col:last-child {
+    margin-right: 0; }
 
 .presto-delivery-card__num {
   font-size: 29px;
@@ -1287,7 +1363,11 @@ body {
 /*-----------------------------*/
 @media (max-width: 1360px) {
   .presto-header-layout {
-    padding: 0 36px; } }
+    padding: 0 36px; }
+  .sticky.presto-header-sticky .layout {
+    width: 100%; }
+  .presto-header-sticky.sticky {
+    padding: 0 14px; } }
 
 @media (max-width: 1240px) {
   .presto-header-layout {
@@ -1325,7 +1405,7 @@ body {
 
 @media (max-width: 900px) {
   .menu {
-    margin: 0; } }
+    margin: 0 0 20px; } }
 
 @media (max-width: 980px) {
   .presto-info > .c-grid {
@@ -1360,7 +1440,18 @@ body {
     padding: 21px 0 21px 44px; }
   .presto-header-logo {
     margin-right: 14px;
-    margin-left: -4px; } }
+    margin-left: -4px; }
+  .app,
+  .presto-about {
+    padding: 28px 30px 30px; }
+  .app-phone {
+    right: 3%; }
+  .app-body {
+    max-width: 55%; }
+  .app-download {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; } }
 
 @media (max-width: 960px) {
   .presto-footer__footer {
@@ -1398,6 +1489,10 @@ body {
     margin: 0 14px 0; }
   .presto-footer-menu__item a {
     white-space: nowrap; } }
+
+@media (max-width: 880px) {
+  .app-title span {
+    display: inline; } }
 
 @media (max-width: 800px) {
   .menu {
@@ -1455,7 +1550,7 @@ body {
   .presto-footer-social__item {
     padding: 0 8px;
     margin: 0 0 8px 0; }
-  .app-download {
+  .presto-footer .app-download {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
@@ -1490,12 +1585,118 @@ body {
   .presto-advantages-card__title {
     margin-bottom: 7px; } }
 
+@media (max-width: 730px) {
+  .home-section {
+    margin: 0 0 20px;
+    border-radius: 0; }
+  .menu {
+    margin: 0; }
+  .presto-info .c-grid {
+    margin: 0; }
+  .presto-info .c-col {
+    padding: 0; }
+  .presto-delivery,
+  .presto-sale {
+    padding: 20px 16px; }
+  .app {
+    padding: 38px 16px 50px; }
+  .presto-advantages {
+    padding: 0 16px; }
+  .presto-about {
+    padding: 20px 16px 20px; }
+  .presto-delivery-card__num span {
+    font-size: 42px; }
+  .app {
+    overflow: hidden; }
+  .app-phone__icon {
+    right: auto;
+    top: 59%;
+    left: -30px; }
+  .app-phone {
+    right: -12%;
+    bottom: -10px; }
+  .app-body {
+    max-width: 64%; }
+  .presto-about__title, .presto-advantages__title, .app-title, .presto-delivery__title, .presto-sale__title {
+    font-size: 25px; } }
+
 @media (max-width: 600px) {
   .menu .menu-item {
     padding: 10px;
     width: 120px; }
   .presto-footer {
-    padding: 20px 0; } }
+    padding: 20px 0; }
+  .app-phone {
+    right: -18%; } }
+
+@media (max-width: 530px) {
+  .app {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .app-phone {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    position: relative;
+    bottom: auto;
+    right: auto;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 14px;
+    overflow: hidden; }
+  .app-body {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    max-width: 100%;
+    text-align: center;
+    padding: 0 14px; }
+  .app-download {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .app-phone img {
+    display: inline-block;
+    position: relative;
+    bottom: -4px;
+    left: 13px; }
+  .app-phone__icon {
+    left: auto;
+    right: 50%;
+    margin-right: -145px; }
+  .app {
+    padding: 16px 0 30px; } }
+
+@media (max-width: 460px) {
+  .presto-sale-combo__list {
+    display: block;
+    margin-bottom: 10px; }
+  .presto-sale-combo__item {
+    width: 100%;
+    margin-bottom: 0; }
+  .presto-sale-combo-card__price,
+  .presto-sale-combo-card__title {
+    display: inline-block; }
+  .presto-about__title,
+  .presto-advantages__title,
+  .app-title,
+  .presto-delivery__title,
+  .presto-sale__title {
+    font-size: 24px; }
+  .presto-advantages-card {
+    padding: 18px 16px; }
+  .presto-about__img {
+    display: none; } }
 
 @media (max-width: 450px) {
   .presto-header-auth {
