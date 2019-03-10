@@ -406,14 +406,51 @@ body {
       height: 2px;
       border-radius: 10px;
       background-color: #402217;
-      left: 0; }
+      left: 0;
+      -webkit-transform-origin: 50% 50%;
+          -ms-transform-origin: 50% 50%;
+              transform-origin: 50% 50%; }
     .presto-header-hamburger__icon span:nth-child(1) {
-      top: 0; }
+      top: 0;
+      -webkit-transition: all .2s ease-out;
+      -o-transition: all .2s ease-out;
+      transition: all .2s ease-out; }
     .presto-header-hamburger__icon span:nth-child(2) {
       top: 50%;
-      margin-top: -1px; }
+      margin-top: -1px;
+      -webkit-transition: all .1s ease-out;
+      -o-transition: all .1s ease-out;
+      transition: all .1s ease-out; }
     .presto-header-hamburger__icon span:nth-child(3) {
-      bottom: 0; }
+      bottom: 0;
+      -webkit-transition: all .2s ease-out;
+      -o-transition: all .2s ease-out;
+      transition: all .2s ease-out; }
+    .presto-header-hamburger__icon.active {
+      -webkit-transition: all .2s ease-out;
+      -o-transition: all .2s ease-out;
+      transition: all .2s ease-out; }
+      .presto-header-hamburger__icon.active span:nth-child(1) {
+        -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        top: 7px;
+        -webkit-transition: all .2s ease-out;
+        -o-transition: all .2s ease-out;
+        transition: all .2s ease-out; }
+      .presto-header-hamburger__icon.active span:nth-child(2) {
+        opacity: 0;
+        -webkit-transition: all .1s ease-out;
+        -o-transition: all .1s ease-out;
+        transition: all .1s ease-out; }
+      .presto-header-hamburger__icon.active span:nth-child(3) {
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+        top: 7px;
+        -webkit-transition: all .2s ease-out;
+        -o-transition: all .2s ease-out;
+        transition: all .2s ease-out; }
 
 .presto-header-sticky .presto-header-logo {
   opacity: 0;

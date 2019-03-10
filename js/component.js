@@ -39,11 +39,13 @@ $(document).ready(function () {
             $('.touch-menu-la').addClass('opened');
             $('body').addClass('is-lock');
             $('.tmla-mask').addClass('is-show');
+            $('.presto-header-hamburger__icon').addClass('active');
         } else {
             // close/hide menu
             $('.touch-menu-la').removeClass('opened');
             $('body').removeClass('is-lock');
             $('.tmla-mask').removeClass('is-show');
+            $('.presto-header-hamburger__icon').removeClass('active');
         }
 
     });
@@ -52,11 +54,13 @@ $(document).ready(function () {
         $(this).toggleClass('is-show');
         $('.touch-menu-la').toggleClass('opened');
         $('body').toggleClass('is-lock');
+        $('.presto-header-hamburger__icon').removeClass('active');
     });
 
 
     $('.presto-header-hamburger__icon').on('click', function(e){
         e.preventDefault();
+        $(this).toggleClass('active');
         $('.tmla-mask').toggleClass('is-show');
         $('.touch-menu-la').toggleClass('opened');
         $('body').toggleClass('is-lock');
