@@ -19,15 +19,48 @@
 // }
 
 
-var TouchMenu = TouchMenuLA({
-    target: document.getElementById('menu')
-});
-
-document.getElementById('presto-header-hamburger').addEventListener('click', function () {
-    TouchMenu.toggle();
-});
+// var TouchMenu = TouchMenuLA({
+//     target: document.getElementById('menu')
+// });
+//
+// document.getElementById('presto-header-hamburger').addEventListener('click', function () {
+//     TouchMenu.toggle();
+// });
 
 $(document).ready(function () {
+
+
+    var swipe = new Hammer(document);
+// detect swipe and call to a function
+    swipe.on('swiperight swipeleft', function(e) {
+        e.preventDefault();
+        if (e.type == 'swiperight') {
+            // open menu
+            $('.touch-menu-la').addClass('opened');
+            $('body').addClass('is-lock');
+            $('.tmla-mask').addClass('is-show');
+        } else {
+            // close/hide menu
+            $('.touch-menu-la').removeClass('opened');
+            $('body').removeClass('is-lock');
+            $('.tmla-mask').removeClass('is-show');
+        }
+
+    });
+
+    $('.tmla-mask').on('click', function(){
+        $(this).toggleClass('is-show');
+        $('.touch-menu-la').toggleClass('opened');
+        $('body').toggleClass('is-lock');
+    });
+
+
+    $('.presto-header-hamburger__icon').on('click', function(e){
+        e.preventDefault();
+        $('.tmla-mask').toggleClass('is-show');
+        $('.touch-menu-la').toggleClass('opened');
+        $('body').toggleClass('is-lock');
+    });
 
     var obg = $('.presto-header-sticky').offset().top;
     // console.log('obg: ' + obg);

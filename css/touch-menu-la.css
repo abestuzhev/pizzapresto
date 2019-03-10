@@ -10,6 +10,13 @@
     overflow-y: auto;
 
     background-color: #f7f3ef;
+    transition: all .3s ease-out;
+}
+
+.touch-menu-la.opened {
+    transition: all .3s ease-out;
+    left: 0;
+    z-index: 99999;
 }
 
 .touch-menu-la .tmla-handle {
@@ -44,4 +51,15 @@
     background-color: #000;
     opacity: 0.0;
     z-index: -1;
+    transition: all .3s ease-out;
+}
+
+.tmla-mask.is-show {
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 0.5;
+    z-index: 99998;
+    transition: all .3s ease-out;
 }
