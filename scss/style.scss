@@ -1516,6 +1516,14 @@ body {
 /*-----------------------------*/
 
 //media
+
+@media (min-width:980px){
+    .touch-menu-la,
+    .tmla-mask {
+        display: none !important;
+    }
+
+}
 @media (max-width:1360px){
     .presto-header-layout {
         padding: 0 36px;

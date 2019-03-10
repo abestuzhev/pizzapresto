@@ -126,15 +126,15 @@ $(document).ready(function () {
     });
 
 
-    $('div').each(function () {
-        if ($('.touch-menu-la').hasClass('opened')) {
-            $('body').addClass('is-lock');
-            console.log('open');
-        } else {
-            $('body').removeClass('is-lock');
-            console.log('no open');
-        }
-    });
+    // $('div').each(function () {
+    //     if ($('.touch-menu-la').hasClass('opened')) {
+    //         $('body').addClass('is-lock');
+    //         console.log('open');
+    //     } else {
+    //         $('body').removeClass('is-lock');
+    //         console.log('no open');
+    //     }
+    // });
 
 
 });
