@@ -1319,8 +1319,12 @@ body {
 .presto-footer {
     //height: 234px;
     background-color: #fff;
-    padding: 30px 0;
+
     font-family: 'MuseoSans', sans-serif;
+}
+
+.presto-footer .layout {
+    padding: 30px 0;
 }
 
 .presto-footer__body {
@@ -1878,7 +1882,7 @@ body {
         width: 120px;
     }
 
-    .presto-footer {
+    .presto-footer .layout {
         padding: 20px 0;
     }
 

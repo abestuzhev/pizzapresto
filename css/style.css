@@ -1171,8 +1171,10 @@ body {
 /*---------------------------*/
 .presto-footer {
   background-color: #fff;
-  padding: 30px 0;
   font-family: 'MuseoSans', sans-serif; }
+
+.presto-footer .layout {
+  padding: 30px 0; }
 
 .presto-footer__body {
   display: -webkit-box;
@@ -1624,7 +1626,7 @@ body {
   .menu .menu-item {
     padding: 10px;
     width: 120px; }
-  .presto-footer {
+  .presto-footer .layout {
     padding: 20px 0; }
   .app-phone {
     right: -18%; } }
